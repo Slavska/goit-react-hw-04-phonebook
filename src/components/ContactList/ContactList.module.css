@@ -1,0 +1,15 @@
+.item {
+  margin-bottom: 5px;
+}
+.btn_delete {
+  margin-left: 10px;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+.btn_delete:hover {
+  background-color: aquamarine;
+}
+.list {
+  margin-top: 20px;
+}

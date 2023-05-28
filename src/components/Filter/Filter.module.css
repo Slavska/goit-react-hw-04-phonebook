@@ -1,0 +1,22 @@
+.form {
+  margin-top: 20px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+.label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+}
+.input {
+  margin-top: 5px;
+  border: 1px solid gray;
+  outline: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.input:focus {
+  outline: none;
+  border: 1px solid aquamarine;
+}

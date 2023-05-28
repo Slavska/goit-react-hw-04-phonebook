@@ -31,7 +31,7 @@ export function App() {
     }
   };
   const filterAll = e => {
-    setFilter(e.currentTarget.value);
+    setFilter(e.target.value);
   };
   const getContacts = () => {
     const filtered = filter.toLowerCase();

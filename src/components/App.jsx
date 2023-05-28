@@ -27,20 +27,18 @@ export function App() {
         name,
         number,
       };
-      setContacts(prevContacts => [...prevContacts, newContact]);
+      setContacts(prevContacts => [newContact, ...prevContacts]);
     }
   };
   const filterAll = e => {
-    setFilter(e.target.value);
+    setFilter(e.currentTarget.value);
   };
   const getContacts = () => {
     const filtered = filter.toLowerCase();
-    return contacts.filter(contact =>
-      contact.name.toLowerCase().includes(filtered)
-    );
+    return contacts.filter(({ name }) => name.toLowerCase().includes(filtered));
   };
-  const deleteContact = id =>
-    setContacts(contacts.filter(contact => contact.id !== id));
+  const deleteContact = contactId =>
+    setContacts(contacts.filter(({ id }) => id !== contactId));
   return (
     <div>
       <h1>Phonebook</h1>

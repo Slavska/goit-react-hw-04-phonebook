@@ -34,8 +34,9 @@ export function App() {
     setFilter(e.currentTarget.value);
   };
   const getContacts = () => {
+    const filtered = filter.toLowerCase();
     return contacts.filter(contact =>
-      contact.name.toLowerCase().includes(filter.toLowerCase())
+      contact.name.toLowerCase().includes(filtered)
     );
   };
   const deleteContact = id =>
